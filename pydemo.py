@@ -1,4 +1,4 @@
-import Clues
+import Deck
 # print("hello world")
 # a = 1+1
 # print ("the value of a is " + str(a))
@@ -21,9 +21,9 @@ import Clues
 # print("What is up!!!!")
 
 def main():
-    clues = Clues.Clues()
-    clue1 = clues.backboneClues[0]
-    print(clue1)
+    deck = Deck.Deck()
+    backBoneClues = deck.deckAndClues.get("backbone")
+    print(backBoneClues)
 
 if __name__ == "__main__":
     main()
