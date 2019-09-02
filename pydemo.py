@@ -23,16 +23,37 @@ import random
 
 # this is the main functions:
 nineRandomIndexes = []
+matchedRandomIndexes =[]
 def main():
+    clueCountDict = {}
+
     deck = Deck.Deck()
     allKeys = list(deck.deckAndClues.keys())
     print(allKeys)
 
     for i in range(9):
-        randomNum = random.randrange(0, 51, 1)
+        randomNum = random.randrange(0, 50, 1)
+        while (randomNum in nineRandomIndexes):
+            randomNum = random.randrange(0, 50, 1)
         nineRandomIndexes.append(randomNum)
 
     print(nineRandomIndexes)
+
+    for x in nineRandomIndexes:
+        generatedword = allKeys[x]
+        matchedRandomIndexes.append(generatedword)
+
+    print(matchedRandomIndexes)
+
+    for word in matchedRandomIndexes:
+        clueList = deck.deckAndClues.get(word)
+        for clue in clueList:
+            if clue in clueCountDict.keys():
+                clueCountDict[clue]+=1
+            else :
+                clueCountDict[clue] = 1
+
+    print(clueCountDict.values())
 
 
 
