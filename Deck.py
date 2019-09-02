@@ -16,7 +16,7 @@ class Deck:
         "battery": ["energize", "power", "assault"],
         "beach": ["sand", "fun", "ocean", "wave", "sun", "warm"],
         "beanstalk": ["cultivate", "thin", "plant"],
-        "bedbug": ["home", "small", "sleep", "home"],
+        "bedbug": ["home", "small", "sleep"],
         "beer": ["drink", "alcohol", "party"],
         "beethoven": ["composer", "piano", "music"],
         "belt": ["pants", "accessory", "fashion"],
