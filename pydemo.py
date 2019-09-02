@@ -20,10 +20,5 @@ import Deck
 # print("HI there")
 # print("What is up!!!!")
 
-def main():
-    deck = Deck.Deck()
-    backBoneClues = deck.deckAndClues.get("backbone")
-    print(backBoneClues)
 
-if __name__ == "__main__":
-    main()
+
