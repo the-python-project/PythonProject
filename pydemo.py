@@ -53,7 +53,8 @@ def main():
             else :
                 clueCountDict[clue] = 1
 
-    print(clueCountDict.values())
+    for i in clueCountDict:
+        print(i, clueCountDict[i])
 
 
 
