@@ -1,4 +1,5 @@
 import Deck
+import random
 # print("hello world")
 # a = 1+1
 # print ("the value of a is " + str(a))
@@ -20,10 +21,19 @@ import Deck
 # print("HI there")
 # print("What is up!!!!")
 
+# this is the main functions:
+nineRandomCards = []
 def main():
     deck = Deck.Deck()
-    backBoneClues = deck.deckAndClues.get("backbone")
-    print(backBoneClues)
+    print(list(deck.deckAndClues.keys()))
+
+    for i in range(9):
+        randomNum = random.randrange(0, 51, 1)
+        nineRandomCards.append(randomNum)
+
+    print(nineRandomCards)
+
+
 
 if __name__ == "__main__":
     main()
