@@ -22,16 +22,18 @@ import random
 # print("What is up!!!!")
 
 # this is the main functions:
-nineRandomCards = []
+nineRandomIndexes = []
 def main():
     deck = Deck.Deck()
-    print(list(deck.deckAndClues.keys()))
+    allKeys = list(deck.deckAndClues.keys())
+    print(allKeys)
 
     for i in range(9):
         randomNum = random.randrange(0, 51, 1)
-        nineRandomCards.append(randomNum)
+        nineRandomIndexes.append(randomNum)
 
-    print(nineRandomCards)
+    print(nineRandomIndexes)
+
 
 
 
