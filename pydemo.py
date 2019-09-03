@@ -23,7 +23,7 @@ import random
 
 # this is the main functions:
 nineRandomIndexes = []
-matchedRandomIndexes =[]
+nineRandomWords =[]
 def main():
     clueCountDict = {}
 
@@ -41,11 +41,11 @@ def main():
 
     for x in nineRandomIndexes:
         generatedword = allKeys[x]
-        matchedRandomIndexes.append(generatedword)
+        nineRandomWords.append(generatedword)
 
-    print(matchedRandomIndexes)
+    print(nineRandomWords)
 
-    for word in matchedRandomIndexes:
+    for word in nineRandomWords:
         clueList = deck.deckAndClues.get(word)
         for clue in clueList:
             if clue in clueCountDict.keys():
@@ -56,7 +56,19 @@ def main():
     for i in clueCountDict:
         print(i, clueCountDict[i])
 
+    cluesOrganizedByCount = [[], [], [], [], [], [], [], [], [], [], [], [], []] # TODO make dynamic
+    for clueCountKey in clueCountDict:
+        count = clueCountDict[clueCountKey]
+        cluesOrganizedByCount[count].append(clueCountKey)
 
+    print(cluesOrganizedByCount[1])
+    print(cluesOrganizedByCount[2])
+    print(cluesOrganizedByCount[3])
+    print(cluesOrganizedByCount[4])
+
+    clueCountsInOrder = list(clueCountDict.values())
+    clueCountsInOrder.sort(reverse=True)
+    print(clueCountsInOrder)
 
 
 if __name__ == "__main__":
